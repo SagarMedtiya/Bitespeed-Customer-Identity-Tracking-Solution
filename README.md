@@ -102,7 +102,7 @@ Expected Response:
     }
 }
 ```
-![Link Secondary Contact (Same Email)](screenshot/Add_the_secondary_contact(same email).png)
+![Link Secondary Contact (Same Email)](screenshot/Add_the_secondary_contact(same_email).png)
 ### Test Case 4: Merge Two Primary Contacts
 
 Step 1: Create first primary contact
