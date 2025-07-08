@@ -7,10 +7,13 @@ import com.example.dto.ContactResponse;
 import com.example.repository.ContactRepository;
 import com.example.dto.ContactRequest;
 import com.example.dto.ContactData;
+import org.springframework.stereotype.Service;
+
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Service
 public class ContactService {
     @Autowired
     private ContactRepository contactRepository;
@@ -47,7 +50,7 @@ public class ContactService {
 
         // Get all contacts linked to the primary
         List<Contact> allLinkedContacts = contactRepository
-                .findByLinkedIdOrId(primaryContact.getId(), primaryContact.getId());
+                .findByLinkedIdOrId(primaryContact.getId());
 
         return createResponseFromContacts(primaryContact, allLinkedContacts);
     }
