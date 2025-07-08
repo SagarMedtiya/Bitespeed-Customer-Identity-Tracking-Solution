@@ -50,7 +50,7 @@ Expected Response:
     }
 }
 ```
-
+![Create New Primary Contact](screenshot/Create_Contact.png)
 ### Test Case 2: Link Secondary Contact (Same Phone)
 
 Request:
@@ -76,6 +76,7 @@ Expected Response:
     }
 }
 ```
+![Link Secondary Contact (Same Phone)](screenshot/Add_the_secondary_contact(same_phone).png)
 ### Test Case 3: Link Secondary Contact (Same Email)
 
 Request:
@@ -101,6 +102,7 @@ Expected Response:
     }
 }
 ```
+![Link Secondary Contact (Same Email)](screenshot/Add_the_secondary_contact(same email).png)
 ### Test Case 4: Merge Two Primary Contacts
 
 Step 1: Create first primary contact
@@ -113,6 +115,7 @@ POST /api/identify
     "phoneNumber": "919191"
 }
 ```
+![Merge Two Primary Contacts](screenshot/merge1.png)
 Step 2: Create second primary contact
 
 ```json
@@ -123,6 +126,7 @@ POST /api/identify
     "phoneNumber": "717171"
 }
 ```
+![Merge Two Primary Contacts](screenshot/merge2.png)
 Step 3: Merge them
 
 ```json
@@ -133,6 +137,7 @@ POST /api/identify
     "phoneNumber": "717171"
 }
 ```
+![Merge Two Primary Contacts](screenshot/merge3.png)
 Expected Response:
 
 ```json
@@ -168,3 +173,4 @@ POST /api/identify
     "phoneNumber": "123456"
 }
 ```
+![Partial Information](screenshot/partial.png)
