@@ -3,8 +3,8 @@ FROM eclipse-temurin:22-jdk-jammy as builder
 
 WORKDIR /app
 
-# Copy Gradle wrapper files first (for caching)
-COPY gradlew .
+# Copy Gradle wrapper files first (with execute permission)
+COPY --chmod=0755 gradlew .
 COPY gradle gradle
 COPY build.gradle settings.gradle ./
 
