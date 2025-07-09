@@ -3,8 +3,6 @@ services:
     name: bitespeed-api
     runtime: docker
     plan: free
-    buildCommand: ./gradlew build -x test
-    startCommand: java -jar build/libs/*.jar
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: render
