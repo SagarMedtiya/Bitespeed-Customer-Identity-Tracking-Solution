@@ -24,8 +24,10 @@ WORKDIR /app
 COPY --from=builder /app/build/libs/*.jar app.jar
 
 # Render.com required settings
-ENV PORT=8080
 EXPOSE $PORT
 ENV JAVA_OPTS="-Xmx512m -Xms256m"
 
 ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar --server.port=${PORT} --spring.datasource.url=\"${DATABASE_URL}\""]
+
+# Add to Dockerfile temporarily
+RUN echo "Using database URL: ${DATABASE_URL}"
