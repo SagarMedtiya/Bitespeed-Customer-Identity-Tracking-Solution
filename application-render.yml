@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://bitespeed_36km_user:VafGLQZ8nA0jlrZeRGoc9lt8As7RDLGA@dpg-d1mnouer433s73dinh3g-a.oregon-postgres.render.com/bitespeed_36km
+    username: bitespeed_36km_user
+    password: VafGLQZ8nA0jlrZeRGoc9lt8As7RDLGA
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 5

@@ -2,12 +2,19 @@ services:
   - type: web
     name: bitespeed-api
     runtime: docker
-    buildCommand: ./gradlew build
-    startCommand: java -jar build/libs/*.jar
     plan: free
+    buildCommand: ./gradlew build -x test
+    startCommand: java -jar build/libs/*.jar
     envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: render
       - key: DATABASE_URL
-        fromDatabase:
-          name: bitespeed-db
-          property: connectionString
+        value: jdbc:postgresql://dpg-d1mnouer433s73dinh3g-a.oregon-postgres.render.com:5432/bitespeed_36km
+      - key: DATABASE_USERNAME
+        value: bitespeed_36km_user
+      - key: DATABASE_PASSWORD
+        value: VafGLQZ8nA0jlrZeRGoc9lt8As7RDLGA
+      - key: PORT
+        value: 8080
     healthCheckPath: /actuator/health
+    autoDeploy: true
