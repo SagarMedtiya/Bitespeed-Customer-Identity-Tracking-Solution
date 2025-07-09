@@ -12,7 +12,7 @@ A Spring Boot application that identifies and tracks customer identities across 
 ## API Documentation
 
 ### Base URL
-`https://your-app-name.onrender.com/api` (replace with your actual deployed URL)
+`https://bitespeed-customer-identity-tracking.onrender.com/api/identity` (replace with your actual deployed URL)
 
 ### Endpoints
 
